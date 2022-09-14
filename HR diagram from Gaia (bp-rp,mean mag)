@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data=pd.read_csv(r"csv-file path")
+x=data.iloc[:,8:9]
+y=data.iloc[:,7:8]
+
+plt.scatter(x,y,color='b',s=0.5)
+plt.style.use('dark_background')
+plt.xlabel('Colour(bp-rp)',fontsize=16)
+plt.ylabel('photo_g_mean_mag',fontsize=16)
+plt.title('Hertzberg-Russell Diagram',fontsize=20)
+plt.show()
